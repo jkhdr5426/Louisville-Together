@@ -50,8 +50,8 @@
     "description": "Affordable housing, rent assistance, and shelters",
     "resources": ["Housing Authority", "Emergency Shelters"],
     "icon": "HomeIcon",
-    "colorTop": "bg-violet-600",
-    "colorBottom": "bg-violet-100"
+    "colorTop": "bg-indigo-600",
+    "colorBottom": "bg-indigo-100"
   },
   {
     "badge": "3+",

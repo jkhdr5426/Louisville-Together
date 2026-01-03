@@ -10,12 +10,12 @@ import {
 
 export default function Hero() {
   const categories = [
-    { name: "Healthcare", icon: HeartIcon },
-    { name: "Food", icon: CakeIcon },
-    { name: "Jobs", icon: BriefcaseIcon },
-    { name: "Education", icon: BookOpenIcon },
-    { name: "Family", icon: UserGroupIcon },
-    { name: "Housing", icon: HomeIcon },
+    { name: "Healthcare", icon: HeartIcon, bg: "bg-blue-600", hover: "hover:bg-blue-700" },
+    { name: "Food", icon: CakeIcon, bg: "bg-green-600", hover: "hover:bg-green-700" },
+    { name: "Jobs", icon: BriefcaseIcon, bg: "bg-orange-600", hover: "hover:bg-orange-700" },
+    { name: "Education", icon: BookOpenIcon, bg: "bg-purple-600", hover: "hover:bg-purple-700" },
+    { name: "Family", icon: UserGroupIcon, bg: "bg-pink-600", hover: "hover:bg-pink-700" },
+    { name: "Housing", icon: HomeIcon, bg: "bg-indigo-500", hover: "hover:bg-indigo-700" },
   ];
 
   return (
@@ -60,10 +60,10 @@ export default function Hero() {
         </div>
 
         <div className="flex flex-wrap justify-center gap-4 max-w-4xl w-full py-4">
-          {categories.map(({ name, icon: Icon }) => (
+          {categories.map(({ name, icon: Icon, bg, hover }) => (
             <button
               key={name}
-              className="flex items-center gap-2 bg-white text-blue-600 font-semibold px-5 py-3 rounded-lg shadow hover:bg-gray-100 transition"
+              className={`flex items-center gap-2 font-semibold px-5 py-3 rounded-lg shadow text-white ${bg} ${hover} flex-shrink-0`}
             >
               <Icon className="w-6 h-6" />
               {name}
@@ -72,7 +72,7 @@ export default function Hero() {
         </div>
         <div className="absolute bottom-6 w-full flex justify-center">
           <div className="w-6 h-10 border-2 border-white/45 rounded-full flex items-center justify-center overflow-hidden animate-bounce"
-            style={{ animation: 'bounce 1.5s infinite' }} // slower bounce
+            style={{ animation: 'bounce 1.5s infinite' }}
           >
             <div className="w-1 h-2 bg-white/25 rounded-full animate-bounce"></div>
           </div>
