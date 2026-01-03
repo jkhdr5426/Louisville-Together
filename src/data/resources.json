@@ -1,16 +1,92 @@
 [
   {
-    "id": 1,
-    "name": "Food Assistance",
-    "category": "Food",
-    "description": "Free meals and grocery support in Louisville",
-    "image": "/assets/food.png"
+    "badge": "3+",
+    "name": "Healthcare",
+    "description": "Medical services, clinics, and health support",
+    "resources": ["Norton Healthcare", "Community Clinics"],
+    "icon": "HeartIcon",
+    "colorTop": "bg-blue-600",
+    "colorBottom": "bg-blue-100"
   },
   {
-    "id": 2,
-    "name": "Housing Support",
-    "category": "Housing",
-    "description": "Helps with temporary and permanent housing",
-    "image": "/assets/housing.png"
+    "badge": "3+",
+    "name": "Food Assistance",
+    "description": "Food banks, meal programs, and nutrition help",
+    "resources": ["Dare to Care Food Bank", "Community Kitchens"],
+    "icon": "CakeIcon",
+    "colorTop": "bg-green-600",
+    "colorBottom": "bg-green-100"
+  },
+  {
+    "badge": "3+",
+    "name": "Employment",
+    "description": "Job training, placement, and career development",
+    "resources": ["Louisville Urban League", "Career Centers"],
+    "icon": "BriefcaseIcon",
+    "colorTop": "bg-orange-500",
+    "colorBottom": "bg-orange-100"
+  },
+  {
+    "badge": "3+",
+    "name": "Education",
+    "description": "Schools, tutoring, scholarships, and learning resources",
+    "resources": ["Adult Education", "Tutoring Services"],
+    "icon": "BookOpenIcon",
+    "colorTop": "bg-purple-600",
+    "colorBottom": "bg-purple-100"
+  },
+  {
+    "badge": "3+",
+    "name": "Family Services",
+    "description": "Childcare, counseling, and family support programs",
+    "resources": ["Family & Children's Place", "Childcare Assistance"],
+    "icon": "UserGroupIcon",
+    "colorTop": "bg-pink-500",
+    "colorBottom": "bg-pink-100"
+  },
+  {
+    "badge": "3+",
+    "name": "Housing",
+    "description": "Affordable housing, rent assistance, and shelters",
+    "resources": ["Housing Authority", "Emergency Shelters"],
+    "icon": "HomeIcon",
+    "colorTop": "bg-violet-600",
+    "colorBottom": "bg-violet-100"
+  },
+  {
+    "badge": "3+",
+    "name": "Utilities",
+    "description": "Help with electric, water, and heating bills",
+    "resources": ["LIHEAP Program", "Utility Assistance"],
+    "icon": "BoltIcon",
+    "colorTop": "bg-cyan-500",
+    "colorBottom": "bg-cyan-100"
+  },
+  {
+    "badge": "3+",
+    "name": "Legal Aid",
+    "description": "Free legal services and advocacy support",
+    "resources": ["Legal Aid Society", "Immigration Services"],
+    "icon": "ScaleIcon",
+    "colorTop": "bg-red-600",
+    "colorBottom": "bg-red-100"
+  },
+  {
+    "badge": "3+",
+    "name": "Crisis Support",
+    "description": "24/7 emergency and crisis intervention services",
+    "resources": ["Crisis Hotline", "Domestic Violence Help"],
+    "icon": "ExclamationTriangleIcon",
+    "colorTop": "bg-orange-700",
+    "colorBottom": "bg-orange-100"
+  },
+  {
+    "badge": "3+",
+    "name": "Financial Help",
+    "description": "Financial counseling and emergency assistance",
+    "resources": ["Financial Counseling", "Emergency Funds"],
+    "icon": "CurrencyDollarIcon",
+    "colorTop": "bg-green-700",
+    "colorBottom": "bg-green-100"
   }
 ]
