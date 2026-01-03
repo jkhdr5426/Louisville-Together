@@ -53,6 +53,47 @@ const Navbar = () => {
           </svg>
         </button>
       </div>
+      {open && (<div className="md:hidden bg-blue-700 px-6 pb-4 space-y-3">
+        <Link
+          to="/"
+          onClick={() => setOpen(false)}
+          className="block hover:underline"
+        >
+          Home
+        </Link>
+
+        <Link
+          to="/resources"
+          onClick={() => setOpen(false)}
+          className="block hover:underline"
+        >
+          Resources
+        </Link>
+
+        <Link
+          to="/map"
+          onClick={() => setOpen(false)}
+          className="block hover:underline"
+        >
+          Map
+        </Link>
+
+        <Link
+          to="/about"
+          onClick={() => setOpen(false)}
+          className="block hover:underline"
+        >
+          About
+        </Link>
+
+        <Link
+          to="/references"
+          onClick={() => setOpen(false)}
+          className="block hover:underline"
+        >
+          References
+        </Link>
+      </div>)}
     </nav>
   );
 };
