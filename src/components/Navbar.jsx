@@ -1,33 +1,68 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-blue-600 text-white">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white text-blue-950">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="text-xl font-bold">
-          <Link to="/" onClick={() => setOpen(false)}>
+          <NavLink to="/" onClick={() => setOpen(false)}>
             Louisville Together
-          </Link>
+          </NavLink>
         </div>
         <div className="space-x-6 hidden md:flex">
-          <Link to="/" className="hover:underline">
+          <NavLink to="/"  className={({ isActive }) =>
+            `px-4 py-2 rounded-md font-medium transition-colors
+            ${
+              isActive
+                ? "bg-blue-500 text-white"            // active page: solid blue
+                : "text-blue-950 hover:bg-slate-100"      // default: white text, hover: semi-transparent white
+            }`
+          }>
             Home
-          </Link>
-          <Link to="/resources" className="hover:underline">
+          </NavLink>
+          <NavLink to="/resources"  className={({ isActive }) =>
+            `px-4 py-2 rounded-md font-medium transition-colors
+            ${
+              isActive
+                ? "bg-blue-500 text-white"            // active page: solid blue
+                : "text-blue-950 hover:bg-slate-100"      // default: white text, hover: semi-transparent white
+            }`
+          }>
             Resources
-          </Link>
-          <Link to="/map" className="hover:underline">
+          </NavLink>
+          <NavLink to="/map"  className={({ isActive }) =>
+            `px-4 py-2 rounded-md font-medium transition-colors
+            ${
+              isActive
+                ? "bg-blue-500 text-white"            // active page: solid blue
+                : "text-blue-950 hover:bg-slate-100"      // default: white text, hover: semi-transparent white
+            }`
+          }>
             Map
-          </Link>
-          <Link to="/about" className="hover:underline">
+          </NavLink>
+          <NavLink to="/about"  className={({ isActive }) =>
+            `px-4 py-2 rounded-md font-medium transition-colors
+            ${
+              isActive
+                ? "bg-blue-500 text-white"            // active page: solid blue
+                : "text-blue-950 hover:bg-slate-100"      // default: white text, hover: semi-transparent white
+            }`
+          }>
             About
-          </Link>
-          <Link to="/references" className="hover:underline">
+          </NavLink>
+          <NavLink to="/references"  className={({ isActive }) =>
+            `px-4 py-2 rounded-md font-medium transition-colors
+            ${
+              isActive
+                ? "bg-blue-500 text-white"            // active page: solid blue
+                : "text-blue-950 hover:bg-slate-100"      // default: white text, hover: semi-transparent white
+            }`
+          }>
             References
-          </Link>
+          </NavLink>
         </div>
         <button
           className="md:hidden focus:outline-none"
@@ -55,47 +90,49 @@ const Navbar = () => {
           </svg>
         </button>
       </div>
-      {open && (<div className="md:hidden bg-blue-700 px-6 pb-4 space-y-3">
-        <Link
-          to="/"
-          onClick={() => setOpen(false)}
-          className="block hover:underline"
-        >
-          Home
-        </Link>
+      {open && (
+        <div className="md:hidden bg-blue-700 px-6 pb-4 space-y-3">
+          <Link
+            to="/"
+            onClick={() => setOpen(false)}
+            className="block hover:underline"
+          >
+            Home
+          </Link>
 
-        <Link
-          to="/resources"
-          onClick={() => setOpen(false)}
-          className="block hover:underline"
-        >
-          Resources
-        </Link>
+          <Link
+            to="/resources"
+            onClick={() => setOpen(false)}
+            className="block hover:underline"
+          >
+            Resources
+          </Link>
 
-        <Link
-          to="/map"
-          onClick={() => setOpen(false)}
-          className="block hover:underline"
-        >
-          Map
-        </Link>
+          <Link
+            to="/map"
+            onClick={() => setOpen(false)}
+            className="block hover:underline"
+          >
+            Map
+          </Link>
 
-        <Link
-          to="/about"
-          onClick={() => setOpen(false)}
-          className="block hover:underline"
-        >
-          About
-        </Link>
+          <Link
+            to="/about"
+            onClick={() => setOpen(false)}
+            className="block hover:underline"
+          >
+            About
+          </Link>
 
-        <Link
-          to="/references"
-          onClick={() => setOpen(false)}
-          className="block hover:underline"
-        >
-          References
-        </Link>
-      </div>)}
+          <Link
+            to="/references"
+            onClick={() => setOpen(false)}
+            className="block hover:underline"
+          >
+            References
+          </Link>
+        </div>
+      )}
     </nav>
   );
 };
