@@ -1,23 +1,25 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home"
+import Resources from "./pages/Resources"
+import Map from "./pages/Map"
 import About from "./pages/About"
+import References from "./pages/References";
+import Navbar from "./components/Navbar";
+
 
 function App() {
   return (
     <Router>
-      <nav className="bg-blue-600 text-white p-4 fixed w-full top-0 z-50 flex justify-between items-center">
-        <div className="font-bold text-xl">Louisville Together</div>
-        <div className="space-x-4">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-        </div>
-      </nav>
-
+      <Navbar />
+      
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/map" element={<Map />} />
           <Route path="/about" element={<About />} />
+          <Route path="/references" element={<References />} />
         </Routes>
       </div>
     </Router>
