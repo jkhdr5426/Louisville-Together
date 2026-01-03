@@ -17,8 +17,8 @@ const Navbar = () => {
             `px-4 py-2 rounded-md font-medium transition-colors
             ${
               isActive
-                ? "bg-blue-500 text-white"            // active page: solid blue
-                : "text-blue-950 hover:bg-slate-100"      // default: white text, hover: semi-transparent white
+                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white"            // active page: solid blue
+                : "text-blue-950 hover:bg-blue-50/85"      // default: white text, hover: semi-transparent white
             }`
           }>
             Home
@@ -27,8 +27,8 @@ const Navbar = () => {
             `px-4 py-2 rounded-md font-medium transition-colors
             ${
               isActive
-                ? "bg-blue-500 text-white"            // active page: solid blue
-                : "text-blue-950 hover:bg-slate-100"      // default: white text, hover: semi-transparent white
+                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white"            // active page: solid blue
+                : "text-blue-950 hover:bg-blue-50/85"      // default: white text, hover: semi-transparent white
             }`
           }>
             Resources
@@ -37,8 +37,8 @@ const Navbar = () => {
             `px-4 py-2 rounded-md font-medium transition-colors
             ${
               isActive
-                ? "bg-blue-500 text-white"            // active page: solid blue
-                : "text-blue-950 hover:bg-slate-100"      // default: white text, hover: semi-transparent white
+                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white"            // active page: solid blue
+                : "text-blue-950 hover:bg-blue-50/85"      // default: white text, hover: semi-transparent white
             }`
           }>
             Map
@@ -47,8 +47,8 @@ const Navbar = () => {
             `px-4 py-2 rounded-md font-medium transition-colors
             ${
               isActive
-                ? "bg-blue-500 text-white"            // active page: solid blue
-                : "text-blue-950 hover:bg-slate-100"      // default: white text, hover: semi-transparent white
+                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white"            // active page: solid blue
+                : "text-blue-950 hover:bg-blue-50/85"      // default: white text, hover: semi-transparent white
             }`
           }>
             About
@@ -57,8 +57,8 @@ const Navbar = () => {
             `px-4 py-2 rounded-md font-medium transition-colors
             ${
               isActive
-                ? "bg-blue-500 text-white"            // active page: solid blue
-                : "text-blue-950 hover:bg-slate-100"      // default: white text, hover: semi-transparent white
+                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white"            // active page: solid blue
+                : "text-blue-950 hover:bg-blue-50/85"      // default: white text, hover: semi-transparent white
             }`
           }>
             References
@@ -91,46 +91,81 @@ const Navbar = () => {
         </button>
       </div>
       {open && (
-        <div className="md:hidden bg-blue-700 px-6 pb-4 space-y-3">
-          <Link
+        <div className="md:hidden bg-slate-50 px-6 pb-4 space-y-3 pt-2">
+          <NavLink
             to="/"
             onClick={() => setOpen(false)}
-            className="block hover:underline"
+            className={({ isActive }) =>
+            `block px-4 py-2 rounded-md font-medium transition-colors
+            ${
+              isActive
+                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white"            // active page: solid blue
+                : "text-blue-950 hover:bg-blue-50/85"      // default: white text, hover: semi-transparent white
+            }`
+          }
           >
             Home
-          </Link>
+          </NavLink>
 
-          <Link
+          <NavLink
             to="/resources"
             onClick={() => setOpen(false)}
-            className="block hover:underline"
+            className={({ isActive }) =>
+            `block px-4 py-2 rounded-md font-medium transition-colors
+            ${
+              isActive
+                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white"            // active page: solid blue
+                : "text-blue-950 hover:bg-blue-50/85"      // default: white text, hover: semi-transparent white
+            }`
+          }
           >
             Resources
-          </Link>
+          </NavLink>
 
-          <Link
+          <NavLink
             to="/map"
             onClick={() => setOpen(false)}
-            className="block hover:underline"
+            className={({ isActive }) =>
+            `block px-4 py-2 rounded-md font-medium transition-colors
+            ${
+              isActive
+                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white"            // active page: solid blue
+                : "text-blue-950 hover:bg-blue-50/85"      // default: white text, hover: semi-transparent white
+            }`
+          }
           >
             Map
-          </Link>
+          </NavLink>
 
-          <Link
+          <NavLink
             to="/about"
             onClick={() => setOpen(false)}
-            className="block hover:underline"
+            className={({ isActive }) =>
+            `block px-4 py-2 rounded-md font-medium transition-colors
+            ${
+              isActive
+                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white"            // active page: solid blue
+                : "text-blue-950 hover:bg-blue-50/85"      // default: white text, hover: semi-transparent white
+            }`
+          }
           >
             About
-          </Link>
+          </NavLink>
 
-          <Link
+          <NavLink
             to="/references"
             onClick={() => setOpen(false)}
-            className="block hover:underline"
+            className={({ isActive }) =>
+            `block px-4 py-2 rounded-md font-medium transition-colors
+            ${
+              isActive
+                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white"            // active page: solid blue
+                : "text-blue-950 hover:bg-blue-50/85"      // default: white text, hover: semi-transparent white
+            }`
+          }
           >
             References
-          </Link>
+          </NavLink>
         </div>
       )}
     </nav>
