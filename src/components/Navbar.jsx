@@ -8,7 +8,9 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full z-50 bg-blue-600 text-white">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="text-xl font-bold">
-          <Link to="/">Louisville Together</Link>
+          <Link to="/" onClick={() => setOpen(false)}>
+            Louisville Together
+          </Link>
         </div>
         <div className="space-x-6 hidden md:flex">
           <Link to="/" className="hover:underline">
