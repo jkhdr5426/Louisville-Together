@@ -1,4 +1,5 @@
-import categoriesData from "../data/resources.json";
+import GradientButton from "./GradientButton";
+import categoriesData from "../data/categories.json";
 import {
   HeartIcon,
   CakeIcon,
@@ -40,7 +41,7 @@ export default function Categories() {
           return (
             <div
               key={cat.name}
-              className="rounded-lg overflow-hidden shadow flex flex-col"
+               className="rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
             >
               {/* Top 25% with icon */}
               <div className={`${cat.colorTop} flex items-center justify-between p-4 h-1/4`}>
@@ -59,7 +60,7 @@ export default function Categories() {
                     <li key={res}>{res}</li>
                   ))}
                 </ul>
-                <button className="mt-auto text-blue-600 font-semibold hover:underline">
+                <button className="text-left mt-auto text-gray-800 font-semibold hover:text-blue-800">
                   View all resources &rarr;
                 </button>
               </div>
@@ -67,6 +68,16 @@ export default function Categories() {
           );
         })}
       </div>
+
+      <p className="text-center text-xl md:text-2xl font-medium mt-12 mb-6">
+        Can't find what you're looking for?
+      </p>
+      <div className="flex justify-center mt-12 mb-16">
+        <GradientButton onClick={() => console.log("Contact clicked!")}>
+          Contact Us for Personalized Help
+        </GradientButton>
+      </div>
+      
     </section>
   );
 }

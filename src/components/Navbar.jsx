@@ -18,7 +18,7 @@ const Navbar = () => {
             `px-4 py-2 rounded-md font-medium transition-colors
             ${
               isActive
-                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white"            // active page: solid blue
+                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white  hover:from-blue-800/95 hover:to-blue-400/75 transition"            // active page: solid blue
                 : "text-blue-950 hover:bg-blue-50/85"      // default: white text, hover: semi-transparent white
             }`
           }>
@@ -28,8 +28,7 @@ const Navbar = () => {
             `px-4 py-2 rounded-md font-medium transition-colors
             ${
               isActive
-                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white"        
-                : "text-blue-950 hover:bg-blue-50/85"    
+                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white  hover:from-blue-800/95 hover:to-blue-400/75 transition"                : "text-blue-950 hover:bg-blue-50/85"    
             }`
           }>
             Resources
@@ -38,8 +37,7 @@ const Navbar = () => {
             `px-4 py-2 rounded-md font-medium transition-colors
             ${
               isActive
-                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white"          
-                : "text-blue-950 hover:bg-blue-50/85"    
+                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white  hover:from-blue-800/95 hover:to-blue-400/75 transition"                : "text-blue-950 hover:bg-blue-50/85"    
             }`
           }>
             Map
@@ -48,8 +46,7 @@ const Navbar = () => {
             `px-4 py-2 rounded-md font-medium transition-colors
             ${
               isActive
-                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white"            
-                : "text-blue-950 hover:bg-blue-50/85"     
+                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white  hover:from-blue-800/95 hover:to-blue-400/75 transition"                : "text-blue-950 hover:bg-blue-50/85"     
             }`
           }>
             About
@@ -58,8 +55,7 @@ const Navbar = () => {
             `px-4 py-2 rounded-md font-medium transition-colors
             ${
               isActive
-                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white"           
-                : "text-blue-950 hover:bg-blue-50/85"      
+                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white  hover:from-blue-800/95 hover:to-blue-400/75 transition"                : "text-blue-950 hover:bg-blue-50/85"      
             }`
           }>
             References
