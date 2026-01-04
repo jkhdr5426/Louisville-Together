@@ -5,6 +5,7 @@ import FeaturedResources from "../components/FeaturedResources";
 import { HeartIcon, CakeIcon, BriefcaseIcon, UserGroupIcon} from "@heroicons/react/24/solid";
 import HowItWorks from "../components/HowItWorks";
 
+
 const featuredResources = [
   {
     name: "Norton Healthcare",

@@ -6,7 +6,7 @@ import Map from "./pages/Map"
 import About from "./pages/About"
 import References from "./pages/References";
 import Navbar from "./components/Navbar";
-
+import Footer from "./components/Footer"
 
 function App() {
   return (
@@ -22,6 +22,8 @@ function App() {
           <Route path="/references" element={<References />} />
         </Routes>
       </div>
+
+      <Footer />
     </Router>
   );
 }
