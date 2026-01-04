@@ -76,7 +76,7 @@ export default function Footer() {
               "All Resources",
               "Resource Map",
               "About Us",
-              "Contact Us",
+              "Map Overview",
               "Accessibility",
               "FAQ",
             ].map((item) => (

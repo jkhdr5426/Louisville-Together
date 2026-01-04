@@ -30,8 +30,6 @@ const iconsMap = {
 };
 
 export default function Categories() {
-  const fadeDuration = 67; // duration of one fade in ms
-
   return (
     <section className="py-12 px-4 md:px-16 bg-gray-50">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-900">
@@ -42,7 +40,7 @@ export default function Categories() {
         {categoriesData.map((cat, idx) => {
           const Icon = iconsMap[cat.icon];
           return (
-            <FadeIn key={cat.name} delay={idx * 67}>
+            <FadeIn key={cat.name} delay={idx * 60}>
               <div className="rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
                 <div className={`${cat.colorTop} flex items-center justify-between p-4 h-1/4`}>
                   <Icon className="w-8 h-8 text-white" />
