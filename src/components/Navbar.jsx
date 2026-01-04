@@ -18,7 +18,7 @@ const Navbar = () => {
             `px-4 py-2 rounded-md font-medium transition-colors
             ${
               isActive
-                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white  hover:from-blue-800/95 hover:to-blue-400/75 transition"            // active page: solid blue
+                ? "text-white bg-gradient-to-r from-sky-900/95 to-sky-500/75 hover:from-sky-800/95 hover:to-sky-400/75 transition"            // active page: solid blue
                 : "text-blue-950 hover:bg-blue-50/85"      // default: white text, hover: semi-transparent white
             }`
           }>
@@ -28,7 +28,8 @@ const Navbar = () => {
             `px-4 py-2 rounded-md font-medium transition-colors
             ${
               isActive
-                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white  hover:from-blue-800/95 hover:to-blue-400/75 transition"                : "text-blue-950 hover:bg-blue-50/85"    
+                ? "text-white bg-gradient-to-r from-sky-900/95 to-sky-500/75 hover:from-sky-800/95 hover:to-sky-400/75 transition"            // active page: solid blue
+                : "text-blue-950 hover:bg-blue-50/85"      // default: white text, hover: semi-transparent white
             }`
           }>
             Resources
@@ -37,7 +38,8 @@ const Navbar = () => {
             `px-4 py-2 rounded-md font-medium transition-colors
             ${
               isActive
-                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white  hover:from-blue-800/95 hover:to-blue-400/75 transition"                : "text-blue-950 hover:bg-blue-50/85"    
+                ? "text-white bg-gradient-to-r from-sky-900/95 to-sky-500/75 hover:from-sky-800/95 hover:to-sky-400/75 transition"            // active page: solid blue
+                : "text-blue-950 hover:bg-blue-50/85"      // default: white text, hover: semi-transparent white
             }`
           }>
             Map
@@ -46,7 +48,8 @@ const Navbar = () => {
             `px-4 py-2 rounded-md font-medium transition-colors
             ${
               isActive
-                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white  hover:from-blue-800/95 hover:to-blue-400/75 transition"                : "text-blue-950 hover:bg-blue-50/85"     
+                ? "text-white bg-gradient-to-r from-sky-900/95 to-sky-500/75 hover:from-sky-800/95 hover:to-sky-400/75 transition"            // active page: solid blue
+                : "text-blue-950 hover:bg-blue-50/85"      // default: white text, hover: semi-transparent white
             }`
           }>
             About
@@ -55,7 +58,8 @@ const Navbar = () => {
             `px-4 py-2 rounded-md font-medium transition-colors
             ${
               isActive
-                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white  hover:from-blue-800/95 hover:to-blue-400/75 transition"                : "text-blue-950 hover:bg-blue-50/85"      
+                ? "text-white bg-gradient-to-r from-sky-900/95 to-sky-500/75 hover:from-sky-800/95 hover:to-sky-400/75 transition"            // active page: solid blue
+                : "text-blue-950 hover:bg-blue-50/85"      // default: white text, hover: semi-transparent white
             }`
           }>
             References
@@ -100,8 +104,8 @@ const Navbar = () => {
             `block px-4 py-2 rounded-md font-medium transition-colors
             ${
               isActive
-                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white"          
-                : "text-blue-950 hover:bg-blue-50/85"      
+                ? "text-white bg-gradient-to-r from-sky-900/95 to-sky-500/75 hover:from-sky-800/95 hover:to-sky-400/75 transition"            // active page: solid blue
+                : "text-blue-950 hover:bg-blue-50/85"      // default: white text, hover: semi-transparent white
             }`
           }
           >
@@ -115,8 +119,8 @@ const Navbar = () => {
             `block px-4 py-2 rounded-md font-medium transition-colors
             ${
               isActive
-                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white"          
-                : "text-blue-950 hover:bg-blue-50/85"      
+                ? "text-white bg-gradient-to-r from-sky-900/95 to-sky-500/75 hover:from-sky-800/95 hover:to-sky-400/75 transition"            // active page: solid blue
+                : "text-blue-950 hover:bg-blue-50/85"      // default: white text, hover: semi-transparent white
             }`
           }
           >
@@ -130,8 +134,8 @@ const Navbar = () => {
             `block px-4 py-2 rounded-md font-medium transition-colors
             ${
               isActive
-                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white"        
-                : "text-blue-950 hover:bg-blue-50/85"     
+                ? "text-white bg-gradient-to-r from-sky-900/95 to-sky-500/75 hover:from-sky-800/95 hover:to-sky-400/75 transition"            // active page: solid blue
+                : "text-blue-950 hover:bg-blue-50/85"      // default: white text, hover: semi-transparent white
             }`
           }
           >
@@ -145,8 +149,8 @@ const Navbar = () => {
             `block px-4 py-2 rounded-md font-medium transition-colors
             ${
               isActive
-                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white"        
-                : "text-blue-950 hover:bg-blue-50/85"     
+                ? "text-white bg-gradient-to-r from-sky-900/95 to-sky-500/75 hover:from-sky-800/95 hover:to-sky-400/75 transition"            // active page: solid blue
+                : "text-blue-950 hover:bg-blue-50/85"      // default: white text, hover: semi-transparent white
             }`
           }
           >
@@ -160,8 +164,8 @@ const Navbar = () => {
             `block px-4 py-2 rounded-md font-medium transition-colors
             ${
               isActive
-                ? "bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white"            
-                : "text-blue-950 hover:bg-blue-50/85"      
+                ? "text-white bg-gradient-to-r from-sky-900/95 to-sky-500/75 hover:from-sky-800/95 hover:to-sky-400/75 transition"            // active page: solid blue
+                : "text-blue-950 hover:bg-blue-50/85"      // default: white text, hover: semi-transparent white
             }`
           }
           >

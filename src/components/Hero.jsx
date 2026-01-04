@@ -51,8 +51,9 @@ export default function Hero() {
             />
             <button
               className="m-1.5 px-4 py-2 rounded-md font-medium transition-colors
-                bg-gradient-to-r from-blue-900/95 to-blue-500/75 text-white
-                hover:from-blue-800/95 hover:to-blue-400/75"
+                text-white bg-gradient-to-r from-sky-900/95 to-sky-500/75
+                hover:from-sky-800/95 hover:to-sky-400/75
+                transition transform hover:scale-105 hover:shadow-xl"
             >
               Search
             </button>
@@ -79,7 +80,7 @@ export default function Hero() {
         </div>
 
       </section>
-      <div className="absolute inset-0 -z-5 bg-gradient-to-b from-blue-800/60 via-transparent to-blue-950"></div>
+      <div className="absolute inset-0 -z-5 bg-gradient-to-b from-sky-900/60 via-transparent to-sky-400/30"></div>
     </div>
   );
 }

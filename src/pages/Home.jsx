@@ -3,6 +3,7 @@ import Categories from "../components/Categories";
 
 import FeaturedResources from "../components/FeaturedResources";
 import { HeartIcon, CakeIcon, BriefcaseIcon, UserGroupIcon} from "@heroicons/react/24/solid";
+import HowItWorks from "../components/HowItWorks";
 
 const featuredResources = [
   {
@@ -38,6 +39,7 @@ function Home() {
       <Hero />
       <Categories />
       <FeaturedResources resources={featuredResources}/>
+      <HowItWorks />
     </div>
   );
 }
