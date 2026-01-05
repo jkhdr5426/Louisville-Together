@@ -1,0 +1,29 @@
+{
+  "name": "Louisville Urban League - Employment Services",
+  "category": "Employment",
+  "featured": true,
+  "reviews": 0,
+  "description": "Comprehensive employment services helping connect job seekers with meaningful career opportunities. We provide job training, resume assistance, interview preparation, professional development workshops, and direct connections to employers. Our programs focus on economic empowerment and removing barriers to employment.",
+  "phone": "(502) 585-4622",
+  "email": "info@lul.org",
+  "website": "https://lul.org",
+  "address": "1535 W Broadway, Louisville, KY 40203",
+  "hours": "Mon-Fri 8:30AM-5PM",
+  "appointment": "N/A",
+  "eligibility": "Open to all job seekers. Priority given to underserved populations.",
+  "services": [
+    "Job Training",
+    "Resume Writing",
+    "Interview Prep",
+    "Career Counseling",
+    "Job Placement",
+    "Computer Skills Training",
+    "Financial Literacy"
+  ],
+  "accessibility": {
+    "wheelchairAccessible": true,
+    "walkInsAccepted": false,
+    "languages": ["English"]
+  },
+  "infoTags": ["Featured Partner", "Employment Services"]
+}
