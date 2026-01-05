@@ -6,7 +6,7 @@ import {
 
 import {
   siInstagram,
-} from "simple-icons/icons";
+} from "simple-icons";
 
 function SocialIcon({ icon, label }) {
   return (

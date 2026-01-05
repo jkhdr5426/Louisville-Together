@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import {
   HeartIcon,
   CakeIcon,
@@ -8,7 +10,11 @@ import {
   MagnifyingGlassIcon,
 } from "@heroicons/react/24/solid";
 
+import SearchBar from "./SearchBar";
+
 export default function Hero() {
+  const [query, setQuery] = useState("");
+
   const categories = [
     { name: "Healthcare", icon: HeartIcon, bg: "bg-blue-600", hover: "hover:bg-blue-700" },
     { name: "Food", icon: CakeIcon, bg: "bg-green-600", hover: "hover:bg-green-700" },
@@ -39,26 +45,13 @@ export default function Hero() {
           Find local services, support, and volunteer opportunities in your community.
         </p>
 
-        <div className="w-full max-w-xl mb-10">
-          <div className="flex rounded-lg overflow-hidden shadow bg-white">
-            <div className="flex items-center px-3 bg-white">
-              <MagnifyingGlassIcon className="w-5 h-5 text-gray-500" />
-            </div>
-            <input
-              type="text"
-              placeholder="Search for resources..."
-              className="flex-grow px-4 py-3 text-black focus:outline-none"
-            />
-            <button
-              className="m-1.5 px-4 py-2 rounded-md font-medium transition-colors
-                text-white bg-gradient-to-r from-sky-900/95 to-sky-500/75
-                hover:from-sky-800/95 hover:to-sky-400/75
-                transition transform hover:scale-105 hover:shadow-xl"
-            >
-              Search
-            </button>
-          </div>
-        </div>
+        <SearchBar
+          value={query}
+          onChange={setQuery}
+          onSearch={() => {
+            console.log("Search from hero:", query);
+          }}
+        />
 
         <div className="flex flex-wrap justify-center gap-4 max-w-4xl w-full py-4">
           {categories.map(({ name, icon: Icon, bg, hover }) => (

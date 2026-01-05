@@ -1,14 +1,6 @@
 # TODO:
 
 # Key Sections
-- Header / Navbar
-- Logo / site title
-- Navigation links (Home, Resources, About, Contact)
-- Responsive design (hamburger menu on mobile)
-- Hero Section
-- Big welcome message
-- Background image or gradient
-- Call-to-action button
 - Resource Categories
 - Cards or boxes with icon + title + short description
 - Clickable to navigate to resource details
