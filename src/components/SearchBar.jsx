@@ -1,6 +1,6 @@
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 
-export default function SearchBar({ value, onChange, highlight = false, showButton = true, fade = false }) {
+export default function SearchBar({ value, onChange, onSearch, highlight = false, showButton = true, fade = false }) {
   return (
     <div className="w-full max-w-xl mb-10">
       <div
@@ -23,11 +23,12 @@ export default function SearchBar({ value, onChange, highlight = false, showButt
 
         {showButton && (
           <button
-            onClick={() => {}}
+            type="button"               // important, prevents accidental form submit
+            onClick={() => onSearch()}   // call the prop from Hero
             className="m-1.5 px-4 py-2 rounded-md font-medium
-                       text-white bg-gradient-to-r from-sky-900/95 to-sky-500/75
-                       hover:from-sky-800/95 hover:to-sky-400/75
-                       transform transition hover:scale-105 hover:shadow-xl"
+                      text-white bg-gradient-to-r from-sky-900/95 to-sky-500/75
+                      hover:from-sky-800/95 hover:to-sky-400/75
+                      transform transition hover:scale-105 hover:shadow-xl"
           >
             Search
           </button>

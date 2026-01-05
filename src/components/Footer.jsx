@@ -1,3 +1,7 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
+
 import {
   MapPinIcon,
   PhoneIcon,
@@ -8,10 +12,13 @@ import {
   siInstagram,
 } from "simple-icons";
 
-function SocialIcon({ icon, label }) {
+
+function SocialIcon({ icon, label, link }) {
   return (
     <a
-      href="#"
+      href={link}
+      // target="_blank"
+      // rel="noopener noreferrer"
       aria-label={label}
       className="w-9 h-9 rounded-full border border-blue-300 flex items-center justify-center
                  hover:border-yellow-400 transition"
@@ -31,6 +38,8 @@ function SocialIcon({ icon, label }) {
 export default function Footer() {
   const linkClass =
     "flex items-center gap-2 text-blue-200 hover:text-yellow-400 transition";
+  const navigate = useNavigate();
+
 
   return (
     <footer className="bg-sky-950 text-white px-6 md:px-20 pt-16">
@@ -45,7 +54,7 @@ export default function Footer() {
           </p>
 
           <div className="flex gap-4 mt-4">
-            <SocialIcon icon={siInstagram} label="Instagram" />
+            <SocialIcon icon={siInstagram} label="Instagram" link="https://www.instagram.com/kimtaehyun2009/"/>
             {/* <SocialIcon icon={siLinkedin} label="LinkedIn" /> */}
           </div>
         </div>
@@ -61,7 +70,14 @@ export default function Footer() {
               "Family Services",
               "Housing",
             ].map((item) => (
-              <li key={item} className={linkClass}>
+              <li
+                key={item}
+                onClick={() =>
+                  navigate(`/resources?category=${encodeURIComponent(item)}`)
+                }
+                className={`${linkClass} cursor-pointer`}
+              >
+
                 <span className="text-blue-200 group-hover:text-yellow-400">•</span>
                 {item}
               </li>
@@ -76,15 +92,21 @@ export default function Footer() {
               "All Resources",
               "Resource Map",
               "About Us",
-              "Map Overview",
-              "Accessibility",
-              "FAQ",
             ].map((item) => (
-              <li key={item} className={linkClass}>
+              <li
+                key={item}
+                className={`${linkClass} cursor-pointer`}
+                onClick={() => {
+                  if (item === "All Resources") navigate("/resources");
+                  if (item === "Resource Map") navigate("/map");
+                  if (item === "About Us") navigate("/about");
+                }}
+              >
                 <span className="text-blue-200 group-hover:text-yellow-400">•</span>
                 {item}
               </li>
             ))}
+
           </ul>
         </div>
 
@@ -97,7 +119,13 @@ export default function Footer() {
               "Dare to Care",
               "Family & Children's Place",
             ].map((item) => (
-              <li key={item} className={linkClass}>
+              <li
+                key={item}
+                onClick={() =>
+                  navigate(`/resources?query=${encodeURIComponent(item)}`)
+                }
+                className={`${linkClass} cursor-pointer`}
+              >
                 <span className="text-blue-200 group-hover:text-yellow-400">•</span>
                 {item}
               </li>
@@ -137,7 +165,9 @@ export default function Footer() {
           </div>
           <div>
             <p className="font-semibold">Email Us</p>
-            <p className="text-blue-200">info@louisvilleconnect.org</p>
+            <a href="mailto:coderman09@gmail.com" className="text-blue-200 hover:text-yellow-400">
+              coderman09@gmail.com
+            </a>
             <p className="text-blue-200">Response within 24 hours</p>
           </div>
         </div>
