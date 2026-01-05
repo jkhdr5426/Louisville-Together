@@ -1,3 +1,6 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import GradientButton from "./GradientButton";
 import categoriesData from "../data/categories.json";
 import FadeIn from "./FadeIn"; 
@@ -30,6 +33,8 @@ const iconsMap = {
 };
 
 export default function Categories() {
+  const navigate = useNavigate();
+
   return (
     <section className="py-12 px-4 md:px-16 bg-gray-50">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-900">
@@ -57,7 +62,12 @@ export default function Categories() {
                       <li key={res}>{res}</li>
                     ))}
                   </ul>
-                  <button className="text-left mt-auto text-gray-800 font-semibold hover:text-blue-800">
+                  <button
+                    onClick={() =>
+                      navigate(`/resources?category=${encodeURIComponent(cat.name)}`)
+                    }
+                    className="text-left mt-auto text-gray-800 font-semibold hover:text-blue-800"
+                  >
                     View all resources &rarr;
                   </button>
                 </div>
@@ -71,9 +81,11 @@ export default function Categories() {
         Can't find what you're looking for?
       </p>
       <div className="flex justify-center mt-12 mb-16">
-        <GradientButton onClick={() => console.log("Contact clicked!")}>
-          Contact Us for Personalized Help
-        </GradientButton>
+        <a href="mailto:coderman09@gmail.com" target="_blank" rel="noopener noreferrer">
+          <GradientButton>
+            Contact Us for Personalized Help
+          </GradientButton>
+        </a>
       </div>
     </section>
   );

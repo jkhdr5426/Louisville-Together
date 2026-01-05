@@ -4,7 +4,6 @@ import ResourceModal from "../components/ResourceModal";
 import SearchBar from "../components/SearchBar";
 import ResourceCard from "../components/ResourceCard";
 import resources from "../data/resources.json";
-
 import { CATEGORY_CONFIG, ALL_CATEGORY } from "../utils/categoryConfig";
 
 export default function Resources() {

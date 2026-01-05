@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
+
 
 import {
   HeartIcon,
@@ -14,6 +16,7 @@ import SearchBar from "./SearchBar";
 
 export default function Hero() {
   const [query, setQuery] = useState("");
+  const navigate = useNavigate();
 
   const categories = [
     { name: "Healthcare", icon: HeartIcon, bg: "bg-blue-600", hover: "hover:bg-blue-700" },
@@ -49,7 +52,10 @@ export default function Hero() {
           value={query}
           onChange={setQuery}
           onSearch={() => {
-            console.log("Search from hero:", query);
+            if (query.trim() !== "") {
+              navigate(`/resources?query=${encodeURIComponent(query)}`);
+              console.log("a");
+            }
           }}
         />
 
@@ -57,6 +63,9 @@ export default function Hero() {
           {categories.map(({ name, icon: Icon, bg, hover }) => (
             <button
               key={name}
+              onClick={() =>
+                navigate(`/resources?category=${encodeURIComponent(name)}`)
+              }
               className={`flex items-center gap-2 font-semibold px-5 py-3 rounded-lg shadow text-white ${bg} ${hover} flex-shrink-0`}
             >
               <Icon className="w-6 h-6" />

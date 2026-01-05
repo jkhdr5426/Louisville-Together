@@ -1,6 +1,10 @@
 import FadeIn from "./FadeIn";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function FeaturedResources({ resources }) {
+  const navigate = useNavigate();
   return (
     <section className="py-24 px-4 md:px-16 bg-gradient-to-b from-sky-900 via-sky-900/95 to-sky-950">
       <div className="flex items-center justify-center gap-4 mb-6">
@@ -65,21 +69,20 @@ export default function FeaturedResources({ resources }) {
                 {res.description}
               </p>
 
-              {res.link && (
-                <a
-                  href={res.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="
-                    inline-flex items-center gap-1
-                    text-amber-400/80 font-medium
-                    hover:text-amber-400
-                    transition
-                  "
-                >
-                  Learn More →
-                </a>
-              )}
+              <button
+                onClick={() =>
+                  navigate(`/resources?query=${encodeURIComponent(res.name)}`)
+                }
+                className="
+                  inline-flex items-center gap-1
+                  text-amber-400/80 font-medium
+                  hover:text-amber-400
+                  transition
+                "
+              >
+                Learn More →
+              </button>
+
             </div>
           </FadeIn>
         ))}
