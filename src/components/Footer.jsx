@@ -76,9 +76,8 @@ export default function Footer() {
               "All Resources",
               "Resource Map",
               "About Us",
-              "Map Overview",
-              "Accessibility",
-              "FAQ",
+              // "Accessibility",
+              // "FAQ",
             ].map((item) => (
               <li key={item} className={linkClass}>
                 <span className="text-blue-200 group-hover:text-yellow-400">•</span>
