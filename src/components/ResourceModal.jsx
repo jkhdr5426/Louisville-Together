@@ -80,7 +80,7 @@ export default function ResourceModal({ resource, open, onClose }) {
                 <h3 className="font-bold text-sky-900">Contact</h3>
 
                 {resource.phone && (
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 text-sky-900 hover:underline">
                     <Phone className="w-5 h-5 text-sky-900" />
                     <a href={`tel:${resource.phone}`}>
                       {resource.phone}
@@ -91,7 +91,12 @@ export default function ResourceModal({ resource, open, onClose }) {
                 {resource.email && (
                   <div className="flex items-center gap-2">
                     <Globe className="w-5 h-5 text-sky-900" />
-                    {resource.email}
+                    <a
+                      href={`mailto:${resource.email}`}
+                      className="text-sky-900 hover:underline"
+                    >
+                      {resource.email}
+                    </a>
                   </div>
                 )}
 
@@ -100,7 +105,7 @@ export default function ResourceModal({ resource, open, onClose }) {
                     href={resource.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sky-900"
+                    className="flex items-center gap-2 text-sky-900 hover:underline"
                   >
                     <ExternalLink className="w-5 h-5" />
                     Visit Website
@@ -108,10 +113,13 @@ export default function ResourceModal({ resource, open, onClose }) {
                 )}
 
                 {fullAddress && (
-                  <div className="flex items-center gap-2">
-                    <MapPin className="w-5 h-5 text-sky-900" />
+                  <a
+                    href={`/map?resourceName=${encodeURIComponent(resource.name)}`}
+                    className="flex items-center gap-2 text-sky-900 hover:underline"
+                  >
+                    <MapPin className="w-5 h-5" />
                     {fullAddress}
-                  </div>
+                  </a>
                 )}
               </div>
 
