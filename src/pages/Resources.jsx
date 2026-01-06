@@ -5,6 +5,12 @@ import SearchBar from "../components/SearchBar";
 import ResourceCard from "../components/ResourceCard";
 import resources from "../data/resources.json";
 import { CATEGORY_CONFIG, ALL_CATEGORY } from "../utils/categoryConfig";
+import { useLocation } from "react-router-dom";
+
+
+function useQueryParams() {
+  return new URLSearchParams(useLocation().search);
+}
 
 export default function Resources() {
   const [query, setQuery] = useState("");
@@ -15,6 +21,26 @@ export default function Resources() {
   const [fadeNotification, setFadeNotification] = useState(false);
   const [highlightSearch, setHighlightSearch] = useState(false);
   const [fadeHighlight, setFadeHighlight] = useState(false);
+
+  const queryParams = useQueryParams();
+
+  const CATEGORY_MAP = {
+    all: "all",
+    "Healthcare": "healthcare",
+    "Food Assistance": "food",
+    "Food": "food",
+    "Jobs": "employment",
+    "Employment": "employment",
+    "Education": "education",
+    "Family": "family_services",
+    "Family Services": "family_services",
+    "Housing": "housing",
+    "Utilities": "utilities",
+    "Legal Aid": "legal_aid",
+    "Crisis Support" : "crisis_support",
+    "Financial Help" : "financial_help"
+  };
+
 
   const handleCategoryClick = (catKey) => {
     setSelectedCategory(catKey);
@@ -29,6 +55,14 @@ export default function Resources() {
       setTimeout(() => setFadeHighlight(true), 5000);
     }
   };
+  useEffect(() => {
+    const urlQuery = queryParams.get("query") || "";
+    const urlCategory = queryParams.get("category") || "all";
+    setQuery(urlQuery);
+    const mappedCategory = CATEGORY_MAP[urlCategory] || "all";
+    setSelectedCategory(mappedCategory);
+  }, [location.search]); // run once on mount
+
 
   // Automatically fade everything when user types
   useEffect(() => {
@@ -78,6 +112,7 @@ export default function Resources() {
               onChange={setQuery}
               onSearch={() => {}}
               highlight={highlightSearch && !fadeHighlight}
+              showButton={false}
             />
 
             {showNotification && (
@@ -136,13 +171,19 @@ export default function Resources() {
 
       <section className="bg-gray-50 py-16 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredResources.map((res) => (
-            <ResourceCard
-              key={res.id}
-              resource={res}
-              onView={() => setSelectedResource(res)}
-            />
-          ))}
+          {filteredResources.length > 0 ? (
+            filteredResources.map((res) => (
+              <ResourceCard
+                key={res.id}
+                resource={res}
+                onView={() => setSelectedResource(res)}
+              />
+            ))
+          ) : (
+            <div className="col-span-full text-center text-gray-500 py-20">
+              No resources match your search or filter.
+            </div>
+          )}
         </div>
 
         <ResourceModal
@@ -151,6 +192,7 @@ export default function Resources() {
           onClose={() => setSelectedResource(null)}
         />
       </section>
+
     </>
   );
 }

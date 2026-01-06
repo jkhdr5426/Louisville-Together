@@ -63,9 +63,10 @@ export default function Hero() {
           {categories.map(({ name, icon: Icon, bg, hover }) => (
             <button
               key={name}
-              onClick={() =>
+              onClick={() => {
                 navigate(`/resources?category=${encodeURIComponent(name)}`)
-              }
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
               className={`flex items-center gap-2 font-semibold px-5 py-3 rounded-lg shadow text-white ${bg} ${hover} flex-shrink-0`}
             >
               <Icon className="w-6 h-6" />

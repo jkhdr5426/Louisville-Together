@@ -1,5 +1,8 @@
 import FadeIn from "./FadeIn";
 import { Search, FileText, Phone } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+
+
 
 const steps = [
   {
@@ -47,6 +50,9 @@ const colorMap = {
 };
 
 export default function HowItWorks() {
+  const navigate = useNavigate();
+
+
   return (
     <section className="py-24 px-4 md:px-16 bg-white">
       {/* Tag */}
@@ -112,12 +118,15 @@ export default function HowItWorks() {
               Thousands of Louisville residents have already found the help they needed.
               You're just a search away.
             </p>
-            <a
-              href="#search"
+           <button
+              onClick={() => {
+                navigate("/resources")
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
               className="px-6 py-3 bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 text-yellow-900 font-semibold rounded-full shadow-lg transform transition hover:scale-105 hover:shadow-xl"
             >
               Start Searching Now
-            </a>
+            </button>
           </div>
         </div>
       </FadeIn>
