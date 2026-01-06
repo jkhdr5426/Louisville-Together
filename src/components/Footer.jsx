@@ -183,13 +183,27 @@ export default function Footer() {
           <span className="hover:text-yellow-400 cursor-pointer transition">
             Team ID 22961-2
           </span>
-          <span className="hover:text-yellow-400 cursor-pointer transition">
+          <span className="hover:text-yellow-400 cursor-pointer transition"
+          onClick={()=>{
+            navigate("/references")
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}>
             Reference Page
           </span>
-          <span className="hover:text-yellow-400 cursor-pointer transition">
+          <span className="hover:text-yellow-400 cursor-pointer transition"
+          onClick={()=>{
+            navigate("/references?highlight=copyright-checklist");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          >
             Copyright Checklist
           </span>
-          <span className="hover:text-yellow-400 cursor-pointer transition">
+          <span className="hover:text-yellow-400 cursor-pointer transition"
+          onClick={()=>{
+            navigate("/references?highlight=work-log");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          >
             Work Log
           </span>
         </div>

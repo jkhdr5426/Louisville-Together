@@ -62,7 +62,8 @@ export default function AboutUs() {
           <div className="bg-slate-50 rounded-3xl shadow-lg p-8 flex flex-col items-start">
             <h3 className="text-2xl font-bold text-slate-900 mb-4">The Beginning</h3>
             <p className="text-gray-600">
-              It all started with a small group of volunteers who wanted to make it easier for residents to find the help they needed.
+              Many Louisville residents struggle financially and need access to health and education resources, but don't know where to find them.  
+              <b> Resources exist—but they're scattered</b> across multiple websites, phone books, and word-of-mouth recommendations.
             </p>
           </div>
 
@@ -70,7 +71,7 @@ export default function AboutUs() {
           <div className="bg-slate-50 rounded-3xl shadow-lg p-8 flex flex-col items-start">
             <h3 className="text-2xl font-bold text-slate-900 mb-4">Growth & Collaboration</h3>
             <p className="text-gray-600">
-              We have compiled local organizations and service providers, expanding our reach and impact across Louisville.
+              We have compiled local organizations and service providers, <b>expanding our reach and impact across Louisville.</b> Our resource hub has resources ranging from food assistance to legal defense, contributing to its richness, diversity, and flexibility for our residents. 
             </p>
           </div>
 
@@ -78,7 +79,7 @@ export default function AboutUs() {
           <div className="bg-slate-50 rounded-3xl shadow-lg p-8 flex flex-col items-start">
             <h3 className="text-2xl font-bold text-slate-900 mb-4">Today & Beyond</h3>
             <p className="text-gray-600">
-              Many residents benefit from our platform every month, and we continue to innovate to help more people.
+              Many residents benefit from our platform every month, and we continue to innovate to help more people. We continue growing <b>greater connections to our city</b> to reach more residents in need.
             </p>
           </div>
         </div>
@@ -88,7 +89,7 @@ export default function AboutUs() {
       <section className="py-24 px-4 md:px-16 bg-gradient-to-b from-sky-50 to-white">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-          Our Impact
+          Our Mission Progress
         </h2>
         <p className="text-slate-600 max-w-2xl mx-auto text-lg">
           Making a difference in the Louisville community, one connection at a time.
