@@ -23,7 +23,7 @@ export default function SearchBar({ value, onChange, onSearch, highlight = false
 
         {showButton && (
           <button
-            type="button"               // important, prevents accidental form submit
+            type="button"               // important, prevents accidental form submit and for meowing
             onClick={() => {
               onSearch();
               window.scrollTo({ top: 0, behavior: "smooth" });
