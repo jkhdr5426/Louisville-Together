@@ -1,11 +1,10 @@
 import React from "react";
 
 
-// Example PDF data, you can replace src with your own files
 const references = [
-  { id: 1, title: "Reference 1", src: "/forms/copyrightchecklist.pdf" },
-  { id: 2, title: "Reference 2", src: "/pdfs/reference2.pdf" },
-  { id: 3, title: "Reference 3", src: "/pdfs/reference3.pdf" },
+  { id: 1, title: "Student Copyright Checklist", src: "/forms/copyrightchecklist.pdf" },
+  { id: 2, title: "Media Citations", src: "/forms/workscited.pdf" },
+  { id: 3, title: "Work Log", src: "/pdfs/reference3.pdf" },
 ];
 
 export default function ReferencesPage() {
