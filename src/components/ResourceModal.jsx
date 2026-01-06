@@ -45,7 +45,6 @@ export default function ResourceModal({ resource, open, onClose }) {
             className="bg-white rounded-3xl max-w-4xl w-full
                        max-h-[90vh] overflow-y-auto shadow-2xl"
           >
-            {/* Header */}
             <div className="sticky top-0 bg-gradient-to-br
                             from-sky-900 to-sky-700 text-white
                             p-6 rounded-t-3xl z-10 flex
@@ -67,9 +66,7 @@ export default function ResourceModal({ resource, open, onClose }) {
               </button>
             </div>
 
-            {/* Content */}
             <div className="p-6 space-y-6">
-              {/* About */}
               <div>
                 <h3 className="text-xl font-bold text-sky-900 mb-2">
                   About
@@ -79,7 +76,6 @@ export default function ResourceModal({ resource, open, onClose }) {
                 </p>
               </div>
 
-              {/* Contact */}
               <div className="bg-blue-50 p-4 rounded-lg space-y-2">
                 <h3 className="font-bold text-sky-900">Contact</h3>
 
@@ -119,7 +115,6 @@ export default function ResourceModal({ resource, open, onClose }) {
                 )}
               </div>
 
-              {/* Hours & Eligibility */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {resource.hours && (
                   <div className="bg-blue-50 p-4 rounded-lg">
@@ -147,7 +142,6 @@ export default function ResourceModal({ resource, open, onClose }) {
                 )}
               </div>
 
-              {/* Services */}
               {resource.services_offered?.length > 0 && (
                 <div>
                   <h3 className="text-xl font-bold text-sky-900 mb-2">
@@ -167,7 +161,6 @@ export default function ResourceModal({ resource, open, onClose }) {
                 </div>
               )}
 
-              {/* Accessibility */}
               <div className="bg-purple-100 p-4 rounded-lg">
                 <h3 className="font-bold text-sky-900">
                   Accessibility
@@ -179,7 +172,6 @@ export default function ResourceModal({ resource, open, onClose }) {
                 </p>
               </div>
 
-              {/* Languages */}
               {resource.languages_spoken?.length > 0 && (
                 <div>
                   <h3 className="font-bold text-sky-900">
@@ -189,7 +181,6 @@ export default function ResourceModal({ resource, open, onClose }) {
                 </div>
               )}
 
-              {/* Rating */}
               <div>
                 <h3 className="font-bold text-sky-900 mb-2">
                   Rate This Resource

@@ -20,7 +20,6 @@ export default function ResourceCard({ resource, onView }) {
   return (
     <div className="bg-white rounded-xl shadow-md p-6 flex flex-col
                     hover:shadow-xl transition transform hover:-translate-y-1">
-      {/* Category label */}
       {category && (
         <span
           className={`inline-block ${category.color} text-white text-xs

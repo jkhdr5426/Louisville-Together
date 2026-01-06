@@ -63,9 +63,10 @@ export default function Categories() {
                     ))}
                   </ul>
                   <button
-                    onClick={() =>
+                    onClick={() => {
                       navigate(`/resources?category=${encodeURIComponent(cat.name)}`)
-                    }
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
                     className="text-left mt-auto text-gray-800 font-semibold hover:text-blue-800"
                   >
                     View all resources &rarr;

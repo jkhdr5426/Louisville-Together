@@ -70,9 +70,10 @@ export default function FeaturedResources({ resources }) {
               </p>
 
               <button
-                onClick={() =>
+                onClick={() => {
                   navigate(`/resources?query=${encodeURIComponent(res.name)}`)
-                }
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
                 className="
                   inline-flex items-center gap-1
                   text-amber-400/80 font-medium

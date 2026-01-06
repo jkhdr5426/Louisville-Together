@@ -55,7 +55,6 @@ export default function Footer() {
 
           <div className="flex gap-4 mt-4">
             <SocialIcon icon={siInstagram} label="Instagram" link="https://www.instagram.com/kimtaehyun2009/"/>
-            {/* <SocialIcon icon={siLinkedin} label="LinkedIn" /> */}
           </div>
         </div>
 
@@ -72,9 +71,10 @@ export default function Footer() {
             ].map((item) => (
               <li
                 key={item}
-                onClick={() =>
+                onClick={() => {
                   navigate(`/resources?category=${encodeURIComponent(item)}`)
-                }
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
                 className={`${linkClass} cursor-pointer`}
               >
 
@@ -100,6 +100,7 @@ export default function Footer() {
                   if (item === "All Resources") navigate("/resources");
                   if (item === "Resource Map") navigate("/map");
                   if (item === "About Us") navigate("/about");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
                 <span className="text-blue-200 group-hover:text-yellow-400">•</span>
@@ -165,7 +166,7 @@ export default function Footer() {
           </div>
           <div>
             <p className="font-semibold">Email Us</p>
-            <a href="mailto:coderman09@gmail.com" className="text-blue-200 hover:text-yellow-400">
+            <a href="mailto:coderman09@gmail.com" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-yellow-400">
               coderman09@gmail.com
             </a>
             <p className="text-blue-200">Response within 24 hours</p>
