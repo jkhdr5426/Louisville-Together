@@ -55,7 +55,6 @@ export default function Footer() {
 
           <div className="flex gap-4 mt-4">
             <SocialIcon icon={siInstagram} label="Instagram" link="https://www.instagram.com/kimtaehyun2009/"/>
-            {/* <SocialIcon icon={siLinkedin} label="LinkedIn" /> */}
           </div>
         </div>
 
