@@ -64,7 +64,7 @@ export default function Resources() {
   }, [location.search]); // run once on mount
 
 
-  // Automatically fade everything when user types
+  // auto fade everything when user types
   useEffect(() => {
     if (query.trim() !== "") {
       setFadeHighlight(true);
@@ -98,7 +98,7 @@ export default function Resources() {
       <section className="bg-sky-900/95 text-white pt-32 pb-20 px-4">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Community Resources
+            Resources Hub
           </h1>
 
           <p className="text-lg text-sky-100 mb-10">

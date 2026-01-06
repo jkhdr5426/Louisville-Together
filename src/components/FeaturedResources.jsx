@@ -104,16 +104,16 @@ export default function FeaturedResources({ resources }) {
             >
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center mb-8">
                 <div>
-                <div className="text-4xl font-bold text-amber-200 mb-1">500+</div>
+                <div className="text-4xl font-bold text-amber-200 mb-1">50+</div>
                 <div className="text-amber-400/80 text-sm tracking-wide uppercase">
                     Resources Listed
                 </div>
                 </div>
 
                 <div>
-                <div className="text-4xl font-bold text-amber-200 mb-1">50+</div>
+                <div className="text-4xl font-bold text-amber-200 mb-1">10+</div>
                 <div className="text-amber-400/80 text-sm tracking-wide uppercase">
-                    Partner Organizations
+                    Resource Categories
                 </div>
                 </div>
 

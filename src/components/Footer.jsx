@@ -8,9 +8,6 @@ import {
   EnvelopeIcon,
 } from "@heroicons/react/24/outline";
 
-import {
-  siInstagram,
-} from "simple-icons";
 
 
 function SocialIcon({ icon, label, link }) {
@@ -46,7 +43,7 @@ export default function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12">
         <div>
           <h3 className="text-xl font-bold mb-3">
-            Louisville Togehter
+            Louisville Together
           </h3>
           <p className="text-blue-200 mb-4">
             Connecting individuals and families to trusted local resources that
@@ -54,7 +51,7 @@ export default function Footer() {
           </p>
 
           <div className="flex gap-4 mt-4">
-            <SocialIcon icon={siInstagram} label="Instagram" link="https://www.instagram.com/kimtaehyun2009/"/>
+            {/* TODO maybe more social stuff later */}
           </div>
         </div>
 
@@ -97,7 +94,7 @@ export default function Footer() {
                 key={item}
                 className={`${linkClass} cursor-pointer`}
                 onClick={() => {
-                  if (item === "All Resources") navigate("/resources");
+                  if (item === "All Resources") navigate('/resources');
                   if (item === "Resource Map") navigate("/map");
                   if (item === "About Us") navigate("/about");
                   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -183,6 +180,9 @@ export default function Footer() {
         </p>
 
         <div className="flex gap-6">
+          <span className="hover:text-yellow-400 cursor-pointer transition">
+            Team ID 22961-2
+          </span>
           <span className="hover:text-yellow-400 cursor-pointer transition">
             Reference Page
           </span>

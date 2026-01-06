@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react";
 export default function FadeIn({
   children,
   delay = 0,
-  y = 20,
 }) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
