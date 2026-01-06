@@ -24,7 +24,10 @@ export default function SearchBar({ value, onChange, onSearch, highlight = false
         {showButton && (
           <button
             type="button"               // important, prevents accidental form submit
-            onClick={() => onSearch()}   // call the prop from Hero
+            onClick={() => {
+              onSearch();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}   // call the prop from Hero
             className="m-1.5 px-4 py-2 rounded-md font-medium
                       text-white bg-gradient-to-r from-sky-900/95 to-sky-500/75
                       hover:from-sky-800/95 hover:to-sky-400/75

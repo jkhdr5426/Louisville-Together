@@ -118,13 +118,14 @@ export default function Footer() {
               "Louisville Urban League",
               "Norton Healthcare",
               "Dare to Care",
-              "Family & Children's Place",
+              "Family and Children's Place",
             ].map((item) => (
               <li
                 key={item}
-                onClick={() =>
+                onClick={() => {
                   navigate(`/resources?query=${encodeURIComponent(item)}`)
-                }
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
                 className={`${linkClass} cursor-pointer`}
               >
                 <span className="text-blue-200 group-hover:text-yellow-400">•</span>
