@@ -57,6 +57,7 @@ export default function Hero() {
               console.log("a");
             }
           }}
+          showButton = {true}
         />
 
         <div className="flex flex-wrap justify-center gap-4 max-w-4xl w-full py-4">
