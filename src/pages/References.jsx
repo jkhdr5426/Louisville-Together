@@ -8,7 +8,7 @@ const references = [
 
 export default function ReferencesPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-16">
+    <div className="min-h-screen bg-gray-50">
       <div className="bg-gradient-to-br bg-sky-900/95 text-white py-20 px-4 text-center pt-32 pb-20 px-4">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
           References
