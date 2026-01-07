@@ -169,8 +169,21 @@ export default function MapPage() {
             </div>
           </div>
 
-          {selectedResource ? (
-            <div className="mt-4 p-4 border rounded-lg shadow-lg bg-white space-y-4">
+         {selectedResource ? (
+            <div
+              className="
+                mt-4
+                p-4
+                border
+                rounded-lg
+                shadow-lg
+                bg-white
+                space-y-4
+                max-h-[60vh]
+                overflow-y-auto
+                lg:max-h-none
+              "
+            >
               <div>
                 <h3 className="font-bold text-2xl text-[#1E3A5F] mb-2">
                   {selectedResource.name}
