@@ -20,7 +20,7 @@ const Navbar = () => {
             <img
               src={icn}
               alt="Louisville Together logo"
-              className="h-12 w-12 object-contain"
+              className="h-8 w-8 object-contain"
             />
             <span>Louisville Together</span>
           </NavLink>
