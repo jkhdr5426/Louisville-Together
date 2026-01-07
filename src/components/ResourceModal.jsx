@@ -43,7 +43,7 @@ export default function ResourceModal({ resource, open, onClose }) {
             exit={{ scale: 0.9, opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
             className="bg-white rounded-3xl max-w-4xl w-full
-                       max-h-[90vh] overflow-y-auto shadow-2xl"
+                       max-h-[90vh] overflow-y-auto shadow-2xl overflow-x-hidden"
           >
             <div className="sticky top-0 bg-gradient-to-br
                             from-sky-900 to-sky-700 text-white
