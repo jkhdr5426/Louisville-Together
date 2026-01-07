@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import icn from '../../public/vite.svg'
+
 
 
 const Navbar = () => {
@@ -9,8 +11,18 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full z-50 bg-white text-blue-950">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="text-xl font-bold">
-          <NavLink to="/" onClick={() => setOpen(false)}>
-            Louisville Together
+          
+          <NavLink
+            to="/"
+            onClick={() => setOpen(false)}
+            className="flex flex-row items-center gap-3 text-xl font-bold"
+          >
+            <img
+              src={icn}
+              alt="Louisville Together logo"
+              className="h-12 w-12 object-contain"
+            />
+            <span>Louisville Together</span>
           </NavLink>
         </div>
         <div className="space-x-6 hidden md:flex">
