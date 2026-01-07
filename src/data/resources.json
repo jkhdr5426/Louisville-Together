@@ -109,42 +109,6 @@
         "is_sample": false
     },
     {
-        "name": "Goodwill Industries - Financial Stability Services",
-        "category": "financial_help",
-        "description": "Financial coaching and assistance programs helping individuals achieve economic self-sufficiency. Offering free tax preparation (VITA), financial education, matched savings programs (IDA), and emergency assistance.",
-        "address": "2820 W Broadway",
-        "city": "Louisville",
-        "state": "KY",
-        "zip_code": "40211",
-        "phone": "(502) 585-5221",
-        "website": "https://goodwillky.org",
-        "email": "info@goodwillky.org",
-        "hours": "Mon-Fri 9AM-5PM",
-        "eligibility": "Open to all, focus on low-income individuals",
-        "services_offered": [
-            "Free Tax Preparation (VITA)",
-            "Financial Coaching",
-            "Matched Savings (IDA)",
-            "Emergency Assistance",
-            "Benefits Screening",
-            "Financial Education"
-        ],
-        "latitude": 38.2534,
-        "longitude": -85.7956,
-        "is_featured": false,
-        "languages_spoken": [
-            "English"
-        ],
-        "wheelchair_accessible": true,
-        "accepts_walk_ins": false,
-        "id": "695480d3e40896bc95a3e91b",
-        "created_date": "2025-12-31T01:48:03.590000",
-        "updated_date": "2025-12-31T01:48:03.590000",
-        "created_by_id": "694f3afae7cd9b2747f3e498",
-        "created_by": "shlok.jena2020@gmail.com",
-        "is_sample": false
-    },
-    {
         "name": "Kentucky Housing Corporation - Homeownership Programs",
         "category": "financial_help",
         "description": "State housing finance agency offering down payment assistance, affordable mortgage programs, and homeownership education for first-time homebuyers and moderate-income families in Louisville and Kentucky.",
@@ -1055,7 +1019,7 @@
         "name": "Volunteers of America Mid-States",
         "category": "housing",
         "description": "Comprehensive human services organization providing affordable housing, veteran services, substance abuse recovery programs, and supportive services. Operating multiple housing sites and programs throughout Louisville.",
-        "address": "570 S 4th St, Suite 100",
+        "address": "570 S 4th St (Suite 100)",
         "city": "Louisville",
         "state": "KY",
         "zip_code": "40202",
@@ -1071,7 +1035,7 @@
             "Senior Housing",
             "Supportive Services"
         ],
-        "latitude": 38.2489,
+        "latitude": 38.2494,
         "longitude": -85.7578,
         "is_featured": false,
         "languages_spoken": [
@@ -1595,17 +1559,17 @@
         "is_sample": false
     },
     {
-        "name": "Goodwill Industries - Career Solutions",
-        "category": "employment",
-        "description": "Career center providing job training, employment services, and skill development programs. We offer free computer training, resume assistance, interview coaching, and connections to local employers. Multiple locations throughout Louisville.",
+        "name": "Goodwill West Louisville Opportunity Center",
+        "category": "financial_help",
+        "description": "Goodwill Kentucky has become a vital part of a community that has endured years of disinvestment. The organization strives to which provide a collection of resources to individuals looking to escape poverty.",
         "address": "2820 W Broadway",
         "city": "Louisville",
         "state": "KY",
         "zip_code": "40211",
-        "phone": "(502) 584-6245",
-        "website": "https://goodwillky.org",
+        "phone": "(502) 316-7100",
+        "website": "https://goodwillwestlouisville.com",
         "email": "careers@goodwillky.org",
-        "hours": "Mon-Fri 9AM-5PM",
+        "hours": "Mon-Fri 8AM-5PM",
         "eligibility": "Open to all job seekers",
         "services_offered": [
             "Job Training",
@@ -1616,8 +1580,8 @@
             "Career Counseling",
             "Retail Training"
         ],
-        "latitude": 38.2534,
-        "longitude": -85.7956,
+        "latitude": 38.249138,
+        "longitude": -85.799231,
         "is_featured": false,
         "languages_spoken": [
             "English"

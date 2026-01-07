@@ -93,6 +93,8 @@ export default function ResourceModal({ resource, open, onClose }) {
                     <Globe className="w-5 h-5 text-sky-900" />
                     <a
                       href={`mailto:${resource.email}`}
+                      target="_blank" 
+                      rel="noopener noreferrer"
                       className="text-sky-900 hover:underline"
                     >
                       {resource.email}

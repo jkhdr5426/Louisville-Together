@@ -145,13 +145,15 @@ export default function AboutUs() {
         >
           Whether volunteering, partnering, or donating, your support helps us connect more residents with the resources they need.
         </motion.p>
-        <motion.button
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="px-8 py-4 font-bold rounded-full bg-yellow-400 text-sky-900 shadow-lg hover:scale-105 transition-transform"
-        >
-          Get Involved
-        </motion.button>
+        <a href="mailto:coderman09@gmail.com" target="_blank" rel="noopener noreferrer">
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="px-8 py-4 font-bold rounded-full bg-yellow-400 text-sky-900 shadow-lg hover:scale-105 transition-transform"
+          >
+            Get Involved
+          </motion.button>
+        </a>
       </section>
     </div>
   );

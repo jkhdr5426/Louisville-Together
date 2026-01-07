@@ -36,7 +36,7 @@ export default function Hero() {
           frameBorder="0"
           allow="autoplay; encrypted-media; picture-in-picture"
           allowFullScreen
-          className="w-full h-full object-cover pointer-events-none scale-[1.05]"
+          className="w-full h-full object-cover pointer-events-none scale-[1] mt-3"
         ></iframe>
       </div>
       <section className="h-1300px bg-blue-600/35 text-white flex flex-col items-center justify-center px-4 md:px-16 py-24 md:py-40">
