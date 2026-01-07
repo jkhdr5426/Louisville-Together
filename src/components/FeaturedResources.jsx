@@ -26,7 +26,7 @@ export default function FeaturedResources({ resources }) {
         Working together with Louisville&apos;s leading organizations to serve our community
       </p>
 
-      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+      <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
         {resources.map((res, idx) => (
           <FadeIn key={idx} delay={idx/2 * 300}>
             <div
