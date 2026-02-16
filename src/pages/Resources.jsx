@@ -81,6 +81,17 @@ export default function Resources() {
     }
   }, [query]);
 
+  // const filteredResources = resources
+  // .map((res) => {
+  //   const similarity = query.trim()
+  //     ? computeSimilarity(query, res) // your AI similarity function
+  //     : 1; // if no query, consider all fully matching
+  //   return { ...res, similarity };
+  // })
+  // .filter((res) => res.similarity > 0.7)
+  // .sort((a, b) => b.similarity - a.similarity); // optional: sort by descending similarity
+
+
   const filteredResources = resources.filter((res) => {
     const matchesCategory =
       selectedCategory === "all" || res.category === selectedCategory;
