@@ -88,5 +88,32 @@
     "icon": "CurrencyDollarIcon",
     "colorTop": "bg-green-700",
     "colorBottom": "bg-green-100"
+  },
+  {
+    "badge": "3+",
+    "name": "Parks",
+    "description": "Green Parks and Reserves",
+    "resources": ["Cave Hill Cemetery", "Big Four Bridge"],
+    "icon": "MapPinIcon",
+    "colorTop": "bg-teal-700",
+    "colorBottom": "bg-teal-100"
+  },
+  {
+    "badge": "3+",
+    "name": "Arts and Culture",
+    "description": "Art Showcases and Culture Parties",
+    "resources": ["Kentucky Derby Museum", "Muhammad Ali Center"],
+    "icon": "PaintBrushIcon",
+    "colorTop": "bg-purple-700",
+    "colorBottom": "bg-purple-100"
+  },
+  {
+    "badge": "3+",
+    "name": "Entertainment",
+    "description": "Financial counseling and emergency assistance",
+    "resources": ["Churchill Downs", "Fourth Street Live!"],
+    "icon": "SparklesIcon",
+    "colorTop": "bg-yellow-700",
+    "colorBottom": "bg-yellow-100"
   }
 ]

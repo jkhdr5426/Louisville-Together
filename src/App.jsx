@@ -7,6 +7,7 @@ import About from "./pages/About"
 import References from "./pages/References";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer"
+import Suggest from "./pages/Suggest";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/map" element={<Map />} />
+          <Route path="/suggest" element={<Suggest/>} />
           <Route path="/about" element={<About />} />
           <Route path="/references" element={<References />} />
         </Routes>

@@ -38,7 +38,10 @@ export default function Resources() {
     "Utilities": "utilities",
     "Legal Aid": "legal_aid",
     "Crisis Support" : "crisis_support",
-    "Financial Help" : "financial_help"
+    "Financial Help" : "financial_help",
+    "Parks" : "park",
+    "Arts and Culture": "artsculture",
+    "Entertainment" : "entertainment"
   };
 
 

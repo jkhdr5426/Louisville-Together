@@ -8,7 +8,10 @@ const categoryColors = {
   Utilities: "bg-cyan-500",
   "Legal Aid": "bg-red-600",
   "Crisis Support": "bg-orange-700",
-  "Financial Help": "bg-green-700"
+  "Financial Help": "bg-green-700",
+  Parks: "bg-teal-700",
+  "Arts and Culture": "bg-purple-700",
+  Entertainment: "bg-yellow-700"
 };
 
 export default categoryColors;

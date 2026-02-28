@@ -16,6 +16,9 @@ import {
   ScaleIcon,
   ExclamationTriangleIcon,
   CurrencyDollarIcon,
+  MapPinIcon,
+  PaintBrushIcon,
+  SparklesIcon
 } from "@heroicons/react/24/solid";
 
 // Map icon string to actual imported component
@@ -30,6 +33,9 @@ const iconsMap = {
   ScaleIcon,
   ExclamationTriangleIcon,
   CurrencyDollarIcon,
+  MapPinIcon,
+  PaintBrushIcon,
+  SparklesIcon
 };
 
 export default function Categories() {
@@ -82,7 +88,7 @@ export default function Categories() {
         Can't find what you're looking for?
       </p>
       <div className="flex justify-center mt-12 mb-16">
-        <a href="mailto:coderman09@gmail.com" target="_blank" rel="noopener noreferrer">
+        <a href="mailto:louisvilletogether@gmail.com" target="_blank" rel="noopener noreferrer">
           <GradientButton>
             Contact Us for Personalized Help
           </GradientButton>

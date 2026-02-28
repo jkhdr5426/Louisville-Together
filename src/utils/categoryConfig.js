@@ -10,7 +10,12 @@ import {
   ExclamationTriangleIcon,
   CurrencyDollarIcon,
   BuildingOfficeIcon,
+  MapPinIcon,
+  PaintBrushIcon,
+  SparklesIcon
 } from "@heroicons/react/24/solid";
+
+
 
 export const CATEGORY_CONFIG = {
   healthcare: {
@@ -63,6 +68,22 @@ export const CATEGORY_CONFIG = {
     color: "bg-green-700",
     icon: CurrencyDollarIcon,
   },
+  park: {
+    label: "Parks",
+    color: "bg-teal-700",
+    icon: MapPinIcon,
+  },
+  artsculture: {
+    label: "Arts and Culture",
+    color: "bg-purple-700",
+    icon: PaintBrushIcon,
+  },
+  entertainment: {
+    label: "Entertainment",
+    color: "bg-yellow-700",
+    icon: SparklesIcon,
+  }
+
 };
 
 export const ALL_CATEGORY = {

@@ -40,7 +40,7 @@ export default function AboutUs() {
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Our Mission</h2>
           <p className="text-slate-600 text-lg md:text-xl leading-relaxed">
-            We exist to make it simple for residents to find the resources they need. Whether it's housing, food, healthcare, or family services, our goal is to connect people with help quickly and efficiently.
+            We exist to make it simple for residents to find the resources they need. Whether it's housing, food, healthcare, or entertainment, our goal is to connect people with help quickly and efficiently.
           </p>
         </motion.div>
       </section>
@@ -145,7 +145,7 @@ export default function AboutUs() {
         >
           Whether volunteering, partnering, or donating, your support helps us connect more residents with the resources they need.
         </motion.p>
-        <a href="mailto:coderman09@gmail.com" target="_blank" rel="noopener noreferrer">
+        <a href="mailto:louisvilletogether@gmail.com" target="_blank" rel="noopener noreferrer">
           <motion.button
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

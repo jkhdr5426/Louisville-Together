@@ -65,6 +65,9 @@ export default function Footer() {
               "Education",
               "Family Services",
               "Housing",
+              "Parks",
+              "Arts and Culture",
+              "Entertainment"
             ].map((item) => (
               <li
                 key={item}
@@ -89,6 +92,7 @@ export default function Footer() {
               "All Resources",
               "Resource Map",
               "About Us",
+              "Suggest Resources"
             ].map((item) => (
               <li
                 key={item}
@@ -97,6 +101,7 @@ export default function Footer() {
                   if (item === "All Resources") navigate('/resources');
                   if (item === "Resource Map") navigate("/map");
                   if (item === "About Us") navigate("/about");
+                  if (item === "Suggest Resources") navigate("/suggest");
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
@@ -164,8 +169,8 @@ export default function Footer() {
           </div>
           <div>
             <p className="font-semibold">Email Us</p>
-            <a href="mailto:coderman09@gmail.com" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-yellow-400">
-              coderman09@gmail.com
+            <a href="mailto:louisvilletogether@gmail.com" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-yellow-400">
+              louisvilletogether@gmail.com
             </a>
             <p className="text-blue-200">Response within 24 hours</p>
           </div>

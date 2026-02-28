@@ -10,6 +10,9 @@ import {
   UserGroupIcon,
   HomeIcon,
   MagnifyingGlassIcon,
+  MapPinIcon,
+  PaintBrushIcon,
+  SparklesIcon
 } from "@heroicons/react/24/solid";
 
 import SearchBar from "./SearchBar";
@@ -25,6 +28,9 @@ export default function Hero() {
     { name: "Education", icon: BookOpenIcon, bg: "bg-purple-600", hover: "hover:bg-purple-700" },
     { name: "Family", icon: UserGroupIcon, bg: "bg-pink-600", hover: "hover:bg-pink-700" },
     { name: "Housing", icon: HomeIcon, bg: "bg-indigo-500", hover: "hover:bg-indigo-700" },
+    { name: "Parks", icon: MapPinIcon, bg: "bg-teal-500", hover: "hover:bg-teal-700"},
+    { name: "Arts and Culture", icon: PaintBrushIcon, bg: "bg-purple-500", hover: "hover:bg-purple-700"},
+    { name: "Entertainment", icon: SparklesIcon, bg: "bg-yellow-500", hover: "hover:bg-yellow-700"}
   ];
 
   return (

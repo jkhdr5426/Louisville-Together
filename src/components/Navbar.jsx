@@ -56,6 +56,16 @@ const Navbar = () => {
           }>
             Map
           </NavLink>
+          <NavLink to="suggest"  className={({ isActive }) =>
+            `px-4 py-2 rounded-md font-medium transition-colors
+            ${
+              isActive
+                ? "text-white bg-gradient-to-r from-sky-900/95 to-sky-500/75 hover:from-sky-800/95 hover:to-sky-400/75 transition"            // active page: solid blue
+                : "text-blue-950 hover:bg-blue-50/85"      // default: white text, hover: semi-transparent white
+            }`
+          }>
+            Suggest
+          </NavLink>
           <NavLink to="/about"  className={({ isActive }) =>
             `px-4 py-2 rounded-md font-medium transition-colors
             ${

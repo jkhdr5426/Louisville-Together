@@ -15,6 +15,9 @@ const categoryColors = {
   legal_aid: "#ef4444",
   crisis_support: "#f97316",
   financial_help: "#10b981",
+  park: "#14b8a6",
+  artsculture: "#a855f7",
+  entertainment: "#f59e0b"
 };
 
 const categories = [
@@ -29,6 +32,9 @@ const categories = [
   { id: "legal_aid", label: "Legal Aid" },
   { id: "crisis_support", label: "Crisis Support" },
   { id: "financial_help", label: "Financial Help" },
+  { id: "park", label: "Parks" },
+  { id: "artsculture", label: "Arts and Culture" },
+  { id: "entertainment", label: "Entertainment" },
 ];
 
 // Dummy resources, replace with your API or JSON import
