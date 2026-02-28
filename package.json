@@ -12,6 +12,7 @@
   "dependencies": {
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",
+    "@sendgrid/mail": "^8.1.6",
     "@tailwindcss/vite": "^4.1.18",
     "framer-motion": "^12.24.0",
     "leaflet": "^1.9.4",
