@@ -1,6 +1,6 @@
+// File: src/pages/Suggest.jsx
 import { useState } from "react";
-import { CATEGORY_CONFIG, ALL_CATEGORY } from "../utils/categoryConfig";
-import { AirplayIcon, PartyPopperIcon, PlaneIcon } from "lucide-react";
+import { CATEGORY_CONFIG } from "../utils/categoryConfig";
 import { PaperAirplaneIcon } from "@heroicons/react/24/solid";
 
 export default function Suggest() {
@@ -17,11 +17,11 @@ export default function Suggest() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  // Normalize category options to an array of strings for safe rendering
-  // Normalize category options for select dropdown
   const categoryOptions = [
-    { value: "", label: "Select a category..." }, // placeholder
+    { value: "", label: "Select a category..." },
     ...Object.entries(CATEGORY_CONFIG).map(([key, config]) => ({
       value: key,
       label: config.label,
@@ -33,12 +33,43 @@ export default function Suggest() {
     setForm((prev) => ({ ...prev, [name]: value }));
   }
 
-  function handleSubmit(e) {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // stub: replace with real API call as needed
-    console.log("Resource suggestion:", form);
-    setSubmitted(true);
-  }
+    setStatus("");
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/submit-resource", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (res.ok) {
+        setStatus("✅ Suggestion sent! Thank you.");
+        setSubmitted(true);
+        setForm({
+          resourceName: "",
+          category: "",
+          description: "",
+          address: "",
+          phone: "",
+          website: "",
+          additionalNotes: "",
+          yourName: "",
+          yourEmail: "",
+        });
+      } else {
+        const data = await res.json().catch(() => ({}));
+        setStatus(`❌ Error: ${data.message || "Failed to submit"} `);
+      }
+    } catch (err) {
+      console.error(err);
+      setStatus("❌ Error sending suggestion.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <>
@@ -53,14 +84,13 @@ export default function Suggest() {
 
       <section className="-mt-12 px-4 pb-20">
         <div className="max-w-5xl mx-auto my-20 md:px-16">
-          {/* Steps */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
             {[
               { title: "Fill out form", desc: "Provide basic details about the resource." },
               { title: "We review it", desc: "Our team verifies information and eligibility." },
               { title: "Gets added", desc: "Once approved, the resource appears in the directory." },
             ].map((step, i) => (
-              <div key={i} className="bg-white shadow rounded-lg p-6 flex items-start gap-4">
+              <div key={step.title} className="bg-white shadow rounded-lg p-6 flex items-start gap-4">
                 <div className="h-12 w-12 rounded-full bg-sky-100 text-sky-900 flex items-center justify-center font-bold">
                   {i + 1}
                 </div>
@@ -72,7 +102,6 @@ export default function Suggest() {
             ))}
           </div>
 
-          {/* Form card */}
           <div className="bg-white shadow-lg rounded-lg p-6">
             {submitted ? (
               <div className="text-center py-12">
@@ -81,17 +110,7 @@ export default function Suggest() {
                 <button
                   onClick={() => {
                     setSubmitted(false);
-                    setForm({
-                      resourceName: "",
-                      category: "",
-                      description: "",
-                      address: "",
-                      phone: "",
-                      website: "",
-                      additionalNotes: "",
-                      yourName: "",
-                      yourEmail: "",
-                    });
+                    setStatus("");
                   }}
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-sky-900/95 text-white font-semibold"
                 >
@@ -230,16 +249,23 @@ export default function Suggest() {
                   <div className="md:col-span-2 text-right mt-4">
                     <button
                       type="submit"
+                      disabled={loading}
                       className="w-full mt-4 py-3 rounded-md font-semibold
                                 text-white bg-gradient-to-r from-sky-900/95 to-sky-500/75
                                 hover:from-sky-800/95 hover:to-sky-400/75
-                                transform transition hover:scale-103 hover:shadow-xl
-                                flex items-center justify-center gap-2"
+                                transform transition hover:scale-105 hover:shadow-xl
+                                flex items-center justify-center gap-2 disabled:opacity-60"
                     >
-                      <PaperAirplaneIcon className="m-3 w-7 h-7"></PaperAirplaneIcon>
-                      Submit Resource Suggestion
+                      <PaperAirplaneIcon className="w-5 h-5" />
+                      {loading ? "Sending…" : "Submit Resource Suggestion"}
                     </button>
                   </div>
+
+                  {status && (
+                    <div className="md:col-span-2">
+                      <p className="text-center">{status}</p>
+                    </div>
+                  )}
                 </div>
               </form>
             )}
