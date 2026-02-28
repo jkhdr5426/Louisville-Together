@@ -4,7 +4,10 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [
-    react(),
+    react({
+      fastRefresh: false // ⚡ disable React Fast Refresh to fix injectIntoGlobalHook error
+    }),
     tailwindcss()
   ],
+  assetsInclude: ["**/*.html"] // tell Vite these are assets, not JS modules
 });
