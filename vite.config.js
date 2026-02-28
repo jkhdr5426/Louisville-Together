@@ -7,5 +7,4 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
-    assetsInclude: ["**/*.html"] // tell Vite these are assets, not JS modules
 });
