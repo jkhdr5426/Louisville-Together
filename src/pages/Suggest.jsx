@@ -39,7 +39,7 @@ export default function Suggest() {
     setLoading(true);
 
     try {
-      const res = await fetch("/api/submit-resource.js", {
+      const res = await fetch("/api/submit-resource", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
