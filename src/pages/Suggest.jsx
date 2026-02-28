@@ -105,8 +105,8 @@ export default function Suggest() {
           <div className="bg-white shadow-lg rounded-lg p-6">
             {submitted ? (
               <div className="text-center py-12">
-                <h2 className="text-2xl font-bold text-slate-900 mb-4">Thanks — your suggestion was received. Check your spam folder or inbox for a confirmation email.</h2>
-                <p className="text-slate-600 mb-6">We’ll review the submission and contact you if we need more details.</p>
+                <h2 className="text-2xl font-bold text-slate-900 mb-4">Thanks — your suggestion was received.</h2>
+                <p className="text-slate-600 mb-6">Check your spam folder or inbox for a confirmation email. We’ll review the submission and contact you if we need more details.</p>
                 <button
                   onClick={() => {
                     setSubmitted(false);
