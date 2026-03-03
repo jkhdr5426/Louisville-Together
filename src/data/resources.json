@@ -2187,7 +2187,7 @@
         "name": "Cherokee Park",
         "accepts_walk_ins": true,
         "state": "KY",
-        "category": "parks",
+        "category": "park",
         "email": null,
         "services_offered": [
             "Hiking trails",
@@ -2223,7 +2223,7 @@
         "name": "Waterfront Park",
         "accepts_walk_ins": true,
         "state": "KY",
-        "category": "parks",
+        "category": "park",
         "email": null,
         "services_offered": [
             "Waterfront trails",
@@ -2259,7 +2259,7 @@
         "name": "E.P. \"Tom\" Sawyer State Park",
         "accepts_walk_ins": true,
         "state": "KY",
-        "category": "parks",
+        "category": "park",
         "email": null,
         "services_offered": [
             "Olympic pool",
@@ -2296,7 +2296,7 @@
         "name": "Seneca Park",
         "accepts_walk_ins": true,
         "state": "KY",
-        "category": "parks",
+        "category": "park",
         "email": null,
         "services_offered": [
             "Golf course",
@@ -2332,7 +2332,7 @@
         "name": "Iroquois Park",
         "accepts_walk_ins": true,
         "state": "KY",
-        "category": "parks",
+        "category": "park",
         "email": null,
         "services_offered": [
             "Amphitheater",
@@ -2368,7 +2368,7 @@
         "name": "Shelby Park",
         "accepts_walk_ins": true,
         "state": "KY",
-        "category": "parks",
+        "category": "park",
         "email": null,
         "services_offered": [
             "Playground",
@@ -2906,7 +2906,7 @@
         "name": "Big Four Bridge",
         "accepts_walk_ins": true,
         "state": "KY",
-        "category": "parks",
+        "category": "park",
         "email": null,
         "services_offered": [
             "Pedestrian bridge",
@@ -2941,7 +2941,7 @@
         "name": "Yew Dell Botanical Gardens",
         "accepts_walk_ins": true,
         "state": "KY",
-        "category": "parks",
+        "category": "park",
         "email": null,
         "services_offered": [
             "Botanical gardens",
@@ -2959,5 +2959,5 @@
         "created_by_id": "694f3afae7cd9b2747f3e498",
         "created_by": "shlok.jena2020@gmail.com",
         "is_sample": false
-    },
+    }
 ]
